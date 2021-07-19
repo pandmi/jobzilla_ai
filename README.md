@@ -26,7 +26,7 @@ Endpoints:  https://jzl-search-api-v7otpcjevq-lz.a.run.app/docs
 
 Cover letter generation: https://jzl-api-v7otpcjevq-lz.a.run.app/?length=500&temperature=0.7&prefix=
 
-(For customized letter creation as prefx varibale should be used "~Job Titke~skill1, skill2, skill3")
+(For customized letter creation as prefx varibale should be used ~Job Title~skill1, skill2, skill3)
 
 
 # Jobzilla - AI - deep dive into creation workflow
