@@ -1,29 +1,26 @@
-# jobzilla_ai
-AI models for automatic job application pipeline (user CV, job description analysis (customized NER/SpaCy) and artificial covere letter generation (trained GPT-2 model) created for Jobzilla project within TechLabs Berlin AI Track programm (03.2021-07.2021). 
-
 # Three created AI-models for Jobzilla
 
-# 1. model:simple without labels and metadata
+## 1. model:simple without labels and metadata
 
 Based on gpt-2-simple library from Max Woolf - https://minimaxir.com/2019/09/howto-gpt2/
 
-## Test finetuning - execution:
+### Test finetuning - execution:
 
 1. Upload notebook file to Google colab
 2. Set the runtime tipe as GPU 
 3. Execute all cells from top to bottom
 
 
-# 2. model: with Title labels 
+## 2. model: with Title labels 
 Model was trained based on cover letters text bodies with job titles and skills as aditional metadata.
 
 
-#  3. model: KWs (skills) - extraction
+##  3. model: KWs (skills) - extraction
 Based on SpyCy NEP with custom keywords matching (json - file with skills - attached). 
 Extraction algorithm was used for job and cv analysis, as well for similarity matching. 
 
 
-# API - deployment
+## API - deployment
 Models were containerized (Docker), set up as API (FastAPI) and deployed on Google Cloud Plattform.
 Endpoints:  https://jzl-search-api-v7otpcjevq-lz.a.run.app/docs
 
