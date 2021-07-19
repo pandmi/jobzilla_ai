@@ -1,7 +1,6 @@
 AI models for automatic job application pipeline (user CV, job description analysis (customized NER/SpaCy) and artificial covere letter generation (trained GPT-2 model) created for Jobzilla project within TechLabs Berlin AI Track programm (03.2021-07.2021). 
 
-
-##  Cover letter generation ai-model
+## Three created AI-models for Jobzilla
 
 ## 1. model:simple without labels and metadata
 
@@ -23,7 +22,7 @@ Based on SpyCy NEP with custom keywords matching (json - file with skills - atta
 Extraction algorithm was used for job and cv analysis, as well for similarity matching. 
 
 
-## API
+## API - deployment
 Models were containerized (Docker), set up as API (FastAPI) and deployed on Google Cloud Plattform.
 Endpoints:  https://jzl-search-api-v7otpcjevq-lz.a.run.app/docs
 
@@ -32,7 +31,7 @@ Cover letter generation: https://jzl-api-v7otpcjevq-lz.a.run.app/?length=500&tem
 (For customized letter creation as prefx varibale should be used "~Job Titke~skill1, skill2, skill3")
 
 
-**Jobzilla - AI - project description**
+## Jobzilla - AI - deep dive into creation workflow
 
 From the AI perspective, our main goal was to create a machine learning model which was able to generate cover letters undistinguished from a human-written one. After reviewing different NLG approaches we have decided for the training already existing transformer model, as the most efficient approach.
 
