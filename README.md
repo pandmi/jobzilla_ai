@@ -1,28 +1,29 @@
+# jobzilla_ai
 AI models for automatic job application pipeline (user CV, job description analysis (customized NER/SpaCy) and artificial covere letter generation (trained GPT-2 model) created for Jobzilla project within TechLabs Berlin AI Track programm (03.2021-07.2021). 
 
-## Three created AI-models for Jobzilla
+# Three created AI-models for Jobzilla
 
-## 1. model:simple without labels and metadata
+# 1. model:simple without labels and metadata
 
 Based on gpt-2-simple library from Max Woolf - https://minimaxir.com/2019/09/howto-gpt2/
 
-### Test finetuning - execution:
+## Test finetuning - execution:
 
 1. Upload notebook file to Google colab
 2. Set the runtime tipe as GPU 
 3. Execute all cells from top to bottom
 
 
-## 2. model: with Title labels 
+# 2. model: with Title labels 
 Model was trained based on cover letters text bodies with job titles and skills as aditional metadata.
 
 
-##  3. model: KWs (skills) - extraction
+#  3. model: KWs (skills) - extraction
 Based on SpyCy NEP with custom keywords matching (json - file with skills - attached). 
 Extraction algorithm was used for job and cv analysis, as well for similarity matching. 
 
 
-## API - deployment
+# API - deployment
 Models were containerized (Docker), set up as API (FastAPI) and deployed on Google Cloud Plattform.
 Endpoints:  https://jzl-search-api-v7otpcjevq-lz.a.run.app/docs
 
@@ -31,7 +32,7 @@ Cover letter generation: https://jzl-api-v7otpcjevq-lz.a.run.app/?length=500&tem
 (For customized letter creation as prefx varibale should be used "~Job Titke~skill1, skill2, skill3")
 
 
-## Jobzilla - AI - deep dive into creation workflow
+# Jobzilla - AI - deep dive into creation workflow
 
 From the AI perspective, our main goal was to create a machine learning model which was able to generate cover letters undistinguished from a human-written one. After reviewing different NLG approaches we have decided for the training already existing transformer model, as the most efficient approach.
 
@@ -45,14 +46,11 @@ Although the used dataset had only ca. 2000 listed skills the final model matche
 
 ![](images/image15.png)
 
-![](RackMultipart20210711-4-1hyfruj_html_e0c55c80ac9ca64f.png)
-
 Img 1: Example of original cover letter from training dataset for the position Data Scientist
 
 The created NER (named entity recognition) framework helped us to add into the training dataset skills and job titles. The retrained GPT-2 based model was able to create a cover letter by prompting a set of skills, job title, or combination of both. In the results we were able to see that the generated text was relevant to the passed into the model information:
 
 ![](images/image3.png)
-![](RackMultipart20210711-4-1hyfruj_html_95dcb2a87f430003.png)
 
 Img 2: Model output after prompt text: Data Scientist~python,sql,algorithms
 
