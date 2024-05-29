@@ -22,9 +22,6 @@ Extraction algorithm was used for job and cv analysis, as well for similarity ma
 
 ## API - deployment
 Models were containerized (Docker), set up as API (FastAPI) and deployed on Google Cloud Plattform.
-Endpoints:  https://jzl-search-api-v7otpcjevq-lz.a.run.app/docs
-
-Cover letter generation: https://jzl-api-v7otpcjevq-lz.a.run.app/?length=500&temperature=0.7&prefix=
 
 (For customized letter creation as prefx varibale should be used **-Job Title-skill1, skill2, skill3**)
 
